@@ -2,7 +2,7 @@
 import MetisMenu from 'metismenujs/dist/metismenujs'
 
 import { authComputed } from '@state/helpers'
-import { authProtectedRoutes } from '@routes'
+// import { authProtectedRoutes } from '@routes'
 import { navigationRoutes } from '@routes'
 
 /**
@@ -18,7 +18,7 @@ export default {
   },
   data() {
     return {
-      //menuItems: authProtectedRoutes,
+      // menuItems: authProtectedRoutes,
       menuItems: navigationRoutes,
     }
   },

@@ -1,10 +1,10 @@
 <script>
 import { authComputed } from '@state/helpers'
-import VuePerfectScrollbar from 'vue-perfect-scrollbar'
+// import VuePerfectScrollbar from 'vue-perfect-scrollbar'
 
 export default {
 	components: {
-		VuePerfectScrollbar,
+		// VuePerfectScrollbar,
 	},
 	props: {
 		user: {

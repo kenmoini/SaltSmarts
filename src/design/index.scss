@@ -47,12 +47,12 @@ File: Main Css File
 @import '~bootstrap/scss/variables';
 
 // in order to have dark theme, just enable this and disable below line
-@import "variables-dark";
-//@import 'variables';
+// @import "variables-dark";
+@import 'variables';
 @import '~bootstrap/scss/mixins';
 @import '~bootstrap/scss/bootstrap';
 // in order to have dark theme, just enable this and disable below line
-@import 'bootstrap-dark';
+// @import 'bootstrap-dark';
 @import 'bootstrap';
 @import '~bootstrap-vue/src/index.scss';
 

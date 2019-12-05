@@ -115,7 +115,8 @@ const errorPagesRoutes = [
   },
 ]
 
-//public routes
+// ========================================================================================
+// public routes
 
 // dashboard
 const publicRoutes = [
@@ -124,15 +125,60 @@ const publicRoutes = [
     name: 'Home',
     header: 'Navigation',
     icon: 'home',
+    /*
     badge: {
       text: '1',
       varient: 'success',
     },
+    */
     component: () => lazyLoadView(import('@views/pages/public/home')),
     meta: { authRequired: false },
     props: (route) => ({ user: store.state.auth.currentUser || {} }),
+  },
+  {
+    name: 'Information',
+    path: '/information',
+    icon: 'info',
+    // component: () => lazyLoadView(import('@views/pages/public/about')),
+    // create a container component
+    component: {
+      render(c) {
+        return c('router-view')
+      },
+    },
+    meta: { authRequired: false },
+    props: (route) => ({ user: store.state.auth.currentUser || {} }),
+    children: [
+      {
+        name: 'About',
+        path: 'about',
+        icon: 'award',
+        meta: { authRequired: false },
+        component: () =>
+          lazyLoadView(import('@views/pages/public/about')),
+      },
+      {
+        path: 'faqs',
+        name: 'FAQs',
+        icon: 'help-circle',
+        meta: { authRequired: false },
+        component: () =>
+          lazyLoadView(import('@views/pages/public/faqs')),
+      },
+      {
+        path: 'documentation',
+        name: 'Documentation',
+        icon: 'book',
+        meta: { authRequired: false },
+        component: () =>
+          lazyLoadView(import('@views/pages/public/documentation')),
+      },
+    ],
   }
 ]
+
+// ========================================================================================
+// Auth routes
 
 // dashboard
 const dashboardRoutes = [

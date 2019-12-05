@@ -7,7 +7,7 @@ import Layout from '@layouts/main'
  */
 export default {
   page: {
-    title: 'Starter',
+    title: 'Home',
     meta: [{ name: 'description', content: appConfig.description }],
   },
   components: { Layout },
